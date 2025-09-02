@@ -29,7 +29,7 @@ module Imessage
           end
 
           opts.on("-a", "--attachment [ATTACHMENT]", String, "Add an attachment") do |attachment|
-            if File.exists?(attachment)
+            if File.exist?(attachment)
               args.attachment = File.expand_path(attachment)
             else
               puts "Can not find file #{attachment}"
